@@ -1,0 +1,18 @@
+<header>
+    <nav>
+        <div></div>
+        <h1>{{title}}</h1>
+        <div class="buttons">
+            <app-button
+                [color]="colors.warning"
+                text="Restart Game"
+                (buttonClick)="restartGame()"
+            ></app-button>
+            <app-button
+                [color]="colors.error"
+                text="Exit Game"
+                (buttonClick)="exitGame()"
+            ></app-button>
+        </div>
+    </nav>
+</header>
