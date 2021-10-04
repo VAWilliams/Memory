@@ -5,7 +5,6 @@
     justify-content: space-evenly;
     align-items: center;
     max-width: 842px;
-    max-height: 844px;
     margin: auto;
     background: linear-gradient(
         133.05deg, 
@@ -22,7 +21,7 @@
     width: 72px;
     height: 112px;
     perspective: 1000px;
-    margin: 15px 10px;
+    margin: 10px;
 }
 
 .inner {
