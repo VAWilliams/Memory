@@ -1,4 +1,4 @@
-const baseImageUrl = "../assets/card";
+const baseImageUrl = "../assets/images/card";
 
 export class Card {
     id: number;
