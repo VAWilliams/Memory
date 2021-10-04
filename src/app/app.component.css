@@ -1,0 +1,73 @@
+.container {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    margin: auto;
+    text-align: center;
+}
+
+
+
+
+
+
+.background {
+    position: relative;
+    /* max-width: 1440px;
+    height: 1024px; */
+    overflow-y: hidden;
+    background: #FFFFFF;
+    margin: auto;
+    /* Specno Gradient 2 */
+    background: radial-gradient(
+        83.67% 83.67% at 100% 100%,
+        #0D4477 0%,
+        #3E92CE 100%
+    );
+}
+.rectangle {
+    height: 100vh;
+}
+.ellipse {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(100px);
+}
+div.ellipse:nth-child(1) {
+    width: 664px;
+    height: 664px;
+    left: 60%;
+    top: 688px;
+    background: radial-gradient(
+        157.07% 157.07% at 171.6% 173.4%,
+        rgb(62, 146, 206, 0.2) 0%,
+        rgb(255, 255, 255, 0.2) 100%),
+        radial-gradient(157.07% 157.07% at 171.6% 173.4%,
+        rgb(62, 146, 206, 0.3) 0%,
+        rgb(255, 255, 255, 0.3) 100%
+    )
+}
+div.ellipse:nth-child(2) {
+    width: 915px;
+    height: 915px;
+    left: 55%;
+    top: -195px;
+    /* Specno Gradient 1 */
+    background: radial-gradient(
+        157.07% 157.07% at 171.6% 173.4%,
+        #3E92CE 0%,
+        rgba(255, 255, 255, .5) 100%
+    );
+}
+div.ellipse:nth-child(3) {
+    width: 637px;
+    height: 637px;
+    left: -5%;
+    top: -188px;
+    /* Specno Gradient 1 */
+    background: radial-gradient(
+        157.07% 157.07% at 171.6% 173.4%,
+        #3E92CE 0%,
+        rgba(255, 255, 255, .5) 100%
+    );
+}
