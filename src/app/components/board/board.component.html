@@ -1,0 +1,8 @@
+<div class="wrapper">
+    <div *ngFor="let card of deck" class="card" (click)="selectCard(card)">
+        <div class="inner" [ngClass]="{ selected: card.isSelected }">
+            <div class="front" [ngStyle]="{'background-image': card.images[0]}"></div>
+            <div class="back" [ngStyle]="{'background-image': card.images[1]}"></div>
+        </div>
+    </div>
+</div>
