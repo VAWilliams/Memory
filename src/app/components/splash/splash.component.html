@@ -1,7 +1,7 @@
 <div class="container">
     <div class="content">
         <h3 class="heading">Well Done! <span>{{winner.name}}</span></h3>
-        <img src="src/assets/images/player/splash.svg" alt="splash">
+        <img src="assets/images/player/splash.svg" alt="splash">
         <div class="toast" *ngFor="let player of players; index as i" [ngClass]="{ winner: i == 0, trophy: i == 0}">
             <img class="player-image" [src]="player.imageUrl" [alt]="player.name">
             <span class="position">{{positions[i]}} Place</span>
