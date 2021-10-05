@@ -1,4 +1,5 @@
 .wrapper {
+    position: relative;
     margin: auto;
     padding: 28px;
     
@@ -17,7 +18,6 @@
     padding: 10px 0;
 }
 .heading {
-    width: 91px;
     height: 36px;
 
     font-style: normal;
@@ -32,7 +32,7 @@
     color: #FFFFFF;
 }
 .score {
-    width: 117px;
+    width: 125px;
     height: 42px;
 
     font-style: normal;
@@ -46,4 +46,34 @@
 
     color: #FFFFFF;
 
+}
+
+.toast {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 220px;
+    height: 64px;
+
+    background: #0AB169;
+    border-radius: 8px;
+}
+.toast h3 {
+
+    font-style: normal;
+    font-weight: bold;
+    font-size: 28px;
+    line-height: 42px;
+    /* identical to box height */
+
+    letter-spacing: -0.02em;
+    text-transform: capitalize;
+
+    /* Shades / 00 */
+
+    color: #FFFFFF;
 }

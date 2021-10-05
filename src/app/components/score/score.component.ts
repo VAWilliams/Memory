@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { IPlayer } from 'src/app/shared/interfaces/IPlayer';
+import { Player } from 'src/app/shared/models/Player';
 
 @Component({
   selector: 'app-score',
@@ -7,9 +7,9 @@ import { IPlayer } from 'src/app/shared/interfaces/IPlayer';
   styleUrls: ['./score.component.css']
 })
 export class ScoreComponent implements OnInit {
-  
+
   @Input()
-  player!: IPlayer;
+  player!: Player;
   
   constructor() { }
 
