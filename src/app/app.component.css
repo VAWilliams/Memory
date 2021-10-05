@@ -13,6 +13,16 @@
     z-index: 1;
 }
 
+app-splash {
+    position: absolute;
+    inset: 0;
+}
+.top {
+    z-index: 2 !important;
+}
+.bottom {
+    z-index: 0 !important;
+}
 
 .background {
     position: absolute;

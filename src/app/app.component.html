@@ -1,8 +1,9 @@
 <div class="container">
-  <div class="content">
+  <div class="content" [ngClass]="{bottom:isGameDone}">
     <app-header></app-header>
-    <router-outlet></router-outlet>
+    <app-game></app-game>
   </div>
+  <app-splash *ngIf="isGameDone" [ngClass]="{top:isGameDone}"></app-splash>
   <div class="background">
     <div class="ellipse"></div>
     <div class="ellipse"></div>
