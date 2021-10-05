@@ -1,0 +1,18 @@
+<div class="container">
+    <div class="content">
+        <h3 class="heading">Are you ready to play?</h3>
+        <form class="form" (ngSubmit)="onSubmit()">
+            <div class="players">
+                <div class="wrapper">
+                    <img src="{{players[0].imageUrl}}" alt="player-image">
+                    <input type="text" name="firstPlayerName" placeholder="Name of Player" [(ngModel)]="firstPlayerName">
+                </div>
+                <div class="wrapper">
+                    <img src="{{players[1].imageUrl}}" alt="player-image">
+                    <input type="text" name="secondPlayerName" placeholder="Name of Player" [(ngModel)]="secondPlayerName">
+                </div>
+            </div>
+            <input type="submit" value="Let's Play" class="btn btn-block">
+        </form>
+    </div>
+</div>
