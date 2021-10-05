@@ -1,5 +1,20 @@
 .row {
+    position: relative;
+    display: grid;
+    grid-template-areas: "left center right";
+}
+
+div.score { margin: auto; }
+div.score:first-child { grid-area: left; }
+div.board { grid-area: center; }
+div.score:last-child { grid-area: right; }
+
+app-pop-up {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
 }

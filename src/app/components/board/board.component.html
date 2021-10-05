@@ -1,8 +1,11 @@
-<div class="wrapper">
+<div class="wrapper" [ngClass]="{messageBackground: mustDisplayMessage}">
     <div *ngFor="let card of deck" class="card" (click)="selectCard(card)">
-        <div class="inner" [ngClass]="{ selected: card.isSelected }">
+        <div class="inner" *ngIf="!card.isCollected" [ngClass]="{ selected: card.isSelected, hide: mustDisplayMessage }">
             <div class="front" [ngStyle]="{'background-image': card.images[0]}"></div>
             <div class="back" [ngStyle]="{'background-image': card.images[1]}"></div>
         </div>
+    </div>
+    <div class="message-wrapper" [ngClass]="{ hide: !mustDisplayMessage }">
+        <h1 class="message">It's A Match!</h1>
     </div>
 </div>
