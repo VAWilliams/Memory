@@ -1,5 +1,5 @@
 .messageBackground {
-    background: url("assets/images/mask.svg"),
+    background: url("src/assets/images/mask.svg"),
                 linear-gradient(
                     116.82deg,
                   rgba(255, 255, 255, 0.8) 0%,
