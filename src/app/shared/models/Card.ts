@@ -6,6 +6,7 @@ export class Card {
     shape: string;
     images: string[];
     isSelected: boolean;
+    isCollected: boolean;
     
 
     constructor(number: string, shape: string) {
@@ -17,5 +18,6 @@ export class Card {
             `url("${baseImageUrl}/Back.svg")`
         ];
         this.isSelected = false;
+        this.isCollected = false;
     }
 }
