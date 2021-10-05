@@ -1,0 +1,133 @@
+.container {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* max-width: 535px; */
+}
+.heading {
+    margin: auto;
+
+    font-style: normal;
+    font-weight: bold;
+    font-size: 48px;
+    line-height: 1.2em;
+    /* identical to box height, or 50% */
+
+    text-align: center;
+    letter-spacing: 0.18px;
+
+    color: #FFFFFF;
+}
+.heading span {
+    display: block;
+    font-size: 72px;
+}
+img[alt="splash"] {
+    margin: 1em auto;
+}
+.toast {
+    position: relative;
+    display: grid;
+    align-items: center;
+    grid-template-columns: repeat(4, 1fr);
+    width: 535px;
+    height: 101.37px;
+    margin: 10px 0;
+    border-radius: 7.8023px;
+    background: #FFFFFF;
+}
+.winner {
+    background: linear-gradient(
+        92.15deg,
+        #FFD975 35.31%,
+        #FFFFFF 135.61%
+    ) !important;
+}
+div.trophy::after {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: -74px;
+    margin: auto;
+    display: block;
+    content: url("../../../assets/images/trophy.svg");
+}
+.toast img {
+    margin: auto;
+    width: 74px;
+    height: 74px;
+}
+
+.toast .position {
+
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 30px;
+    letter-spacing: -0.02em;
+    text-transform: capitalize;
+
+    color: #0D4477;
+}
+
+.toast span {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 30px;
+    letter-spacing: -0.02em;
+    text-transform: capitalize;
+
+    color: #0D4477;
+}
+
+button {
+    /* Button */
+
+
+    /* Auto Layout */
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 16px;
+
+    width: 164px;
+    height: 56px;
+
+    /* Specno/-30 */
+
+    background: #A7DAFF;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.05);
+    border: none;
+    border-radius: 8px;
+    margin: 3em auto;
+    cursor: pointer;
+}
+button span {
+
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 16px;
+    /* identical to box height, or 100% */
+
+    text-align: center;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+
+    /* Specno/40 */
+
+    color: #164464;
+
+
+    /* Inside Auto Layout */
+
+    flex: none;
+    order: 0;
+    flex-grow: 1;
+    margin: 0px 12px;
+}
