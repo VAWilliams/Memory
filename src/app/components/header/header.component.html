@@ -3,12 +3,12 @@
         <div></div>
         <h1>{{title}}</h1>
         <div class="buttons">
-            <app-button
+            <app-button *ngIf="isGameInProgress"
                 [color]="colors.warning"
                 text="Restart Game"
                 (buttonClick)="restartGame()"
             ></app-button>
-            <app-button
+            <app-button *ngIf="!isGameDone"
                 [color]="colors.error"
                 text="Exit Game"
                 (buttonClick)="exitGame()"
