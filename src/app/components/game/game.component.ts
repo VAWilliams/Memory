@@ -1,7 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-import { IPlayer } from 'src/app/shared/interfaces/IPlayer';
+import { Store, select } from '@ngrx/store';
+import { Subscription } from 'rxjs';
+import { PlayerUpdate } from 'src/app/actions/player.actions';
+import { UiService } from 'src/app/services/ui/ui.service';
+import { Player } from 'src/app/shared/models/Player'; 
 
-const baseImageUrl = "../../assets/images/player";
 
 @Component({
   selector: 'app-game',
@@ -9,24 +12,25 @@ const baseImageUrl = "../../assets/images/player";
   styleUrls: ['./game.component.css']
 })
 export class GameComponent implements OnInit {
+  players!: Player[];
+  total!: number;
+  isGameInProgress!: boolean;
+  subscription: Subscription;
 
-  players!: IPlayer[];
-  constructor() {
+  constructor(private store: Store<{players: Player[]}>, private uiService: UiService) {
+    this.store.pipe(select("players"))
+      .subscribe(players => this.players = players);
+
+    this.subscription = this.uiService
+      .updateUi()
+      .subscribe(isGameInProgress => this.isGameInProgress = isGameInProgress);
+    
   }
 
   ngOnInit(): void {
-    this.players = [
-      {
-        imageUrl: `${baseImageUrl}/Player-1.svg`,
-        name: "Player 1",
-        score: 0
-      },
-      {
-        imageUrl: `${baseImageUrl}/Player-2.svg`,
-        name: "Player 2",
-        score: 0
-      }
-    ]
+    this.store.dispatch(new PlayerUpdate([
+      { current: true }
+    ]))
   }
 
 }
