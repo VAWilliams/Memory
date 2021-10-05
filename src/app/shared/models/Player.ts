@@ -1,4 +1,4 @@
-const baseImageUrl = "../../assets/images/player";
+const baseImageUrl = "assets/images/player";
 const imageUrls: string[] = [
     `${baseImageUrl}/Player-1.svg`,
     `${baseImageUrl}/Player-2.svg`

@@ -52,7 +52,7 @@ div.trophy::after {
     left: -74px;
     margin: auto;
     display: block;
-    content: url("../../../assets/images/trophy.svg");
+    content: url("assets/images/trophy.svg");
 }
 .toast img {
     margin: auto;
