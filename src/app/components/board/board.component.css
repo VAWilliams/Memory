@@ -7,12 +7,13 @@
     ) !important;
 }
 .wrapper {
-    display: flex;
+    display: grid;
+    grid-template: repeat(6, 1fr) / repeat(9, 1fr);
     position: relative;
-    flex-direction: row;
+    /* flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-evenly;
-    align-items: center;
+    align-items: center; */
     max-width: 842px;
     margin: auto;
     background: linear-gradient(
@@ -22,7 +23,6 @@
     );
     border-radius: 8px;
 }
-
 /* Card Flip */
 
 .card {
@@ -79,4 +79,11 @@ text-transform: capitalize;
 
 color: #489DDA;
 
+}
+
+@media only screen and (max-width: 1440px) {
+    .wrapper {
+        width: auto;
+        zoom: 0.8;
+    }
 }

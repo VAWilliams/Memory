@@ -18,7 +18,6 @@ export class UiService {
   }
 
   updateUi(): Observable<any> {
-    console.log(this.subject)
     return this.subject.asObservable();
   }
   
