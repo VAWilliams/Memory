@@ -10,8 +10,6 @@ export class ScoreComponent implements OnInit {
 
   @Input()
   player!: Player;
-  @Input()
-  index!: number;
   
   constructor() { }
 

@@ -15,16 +15,15 @@ export class GameComponent implements OnInit {
   players!: Player[];
   total!: number;
   isGameInProgress!: boolean;
-  // subscription: Subscription;
+  subscription: Subscription;
 
   constructor(private store: Store<{players: Player[]}>, private uiService: UiService) {
     this.store.pipe(select("players"))
       .subscribe(players => this.players = players);
 
-    this.isGameInProgress = true;
-    // this.subscription = this.uiService
-    //   .updateUi()
-    //   .subscribe(isGameInProgress => this.isGameInProgress = isGameInProgress);
+    this.subscription = this.uiService
+      .updateUi()
+      .subscribe(isGameInProgress => this.isGameInProgress = isGameInProgress);
     
   }
 
@@ -32,7 +31,6 @@ export class GameComponent implements OnInit {
     this.store.dispatch(new PlayerUpdate([
       { current: true }
     ]))
-    console.log(this.isGameInProgress);
   }
 
 }
