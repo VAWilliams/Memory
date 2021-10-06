@@ -2,7 +2,7 @@
     <div *ngFor="let player of players, index as i" class="score" [ngStyle]="{'opacity': isGameInProgress ? '1' : '0'}">
         <app-score [player]="player" [index]="i"></app-score>
     </div>
-    <div class="score-display"><span>Score</span></div>
+    <div class="score-display" [ngStyle]="{'opacity': isGameInProgress ? '1' : '0'}"><span>Score</span></div>
     <div class="board" [ngStyle]="{'opacity': isGameInProgress ? '1' : '0'}">
         <app-board></app-board>
     </div>
