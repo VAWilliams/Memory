@@ -1,13 +1,29 @@
 .row {
     position: relative;
     display: grid;
-    grid-template-areas: "left center right";
+    grid-template-areas: "left-player board right-player";
 }
 
 div.score { margin: auto; }
-div.score:first-child { grid-area: left; }
-div.board { grid-area: center; }
-div.score:last-child { grid-area: right; }
+div.score:first-child { grid-area: left-player; }
+div.board { grid-area: board; }
+div.score:last-child { grid-area: right-player; }
+.score-display {
+    display: none;
+    grid-area: score;
+    position: static;
+
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    /* identical to box height */
+
+    letter-spacing: -0.02em;
+    text-transform: capitalize;
+
+    color: #FFFFFF;
+}
 
 app-pop-up {
     position: absolute;
@@ -17,4 +33,25 @@ app-pop-up {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+@media only screen and (max-width: 1440px) {
+    .row {
+        grid-template:
+            [game-board] "board board board" [game-board]
+            [game-score] "left-player score right-player" [game-score] /
+            1fr 5em 1fr
+        ;
+        width: 842px;
+        margin: auto;
+    }
+    .score {
+        margin: 20px auto !important;
+        width: 100%;
+    }
+    .score-display {
+        display: block;
+        padding: 12px;
+        margin: auto;
+    }
 }
