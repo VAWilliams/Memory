@@ -32,10 +32,11 @@ img[alt="splash"] {
     display: grid;
     align-items: center;
     grid-template-columns: repeat(4, 1fr);
-    width: 535px;
-    height: 101.37px;
-    margin: 10px 0;
-    border-radius: 7.8023px;
+    font-size: 14px;
+    width: 25em;
+    height: 6em;
+    margin: .5em 0;
+    border-radius: .25em;
     background: #FFFFFF;
 }
 .winner {
@@ -64,7 +65,7 @@ div.trophy::after {
 
     font-style: normal;
     font-weight: bold;
-    font-size: 20px;
+    /* font-size: 20px; */
     line-height: 30px;
     letter-spacing: -0.02em;
     text-transform: capitalize;
@@ -75,7 +76,7 @@ div.trophy::after {
 .toast span {
     font-style: normal;
     font-weight: 500;
-    font-size: 20px;
+    /* font-size: 20px; */
     line-height: 30px;
     letter-spacing: -0.02em;
     text-transform: capitalize;
@@ -130,4 +131,25 @@ button span {
     order: 0;
     flex-grow: 1;
     margin: 0px 12px;
+}
+
+@media only screen and (min-width: 380px) {
+    .heading { font-size: 20px; }
+    .heading span { font-size: 32px; }
+    img[alt="splash"] {
+        width: 7.375em;
+        margin: 0;
+    }
+    button { display: none; }
+}
+
+@media only screen and (min-width: 820px) {
+    .heading { font-size: 48px; }
+    .heading span { font-size: 72px; }
+    img[alt="splash"] {
+        width: auto;
+        margin: 1em auto;
+    }
+    div.toast { width: 35em; }
+    button { display: block; }
 }

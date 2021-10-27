@@ -1,13 +1,17 @@
 .row {
     position: relative;
-    display: grid;
-    grid-template-areas: "left-player board right-player";
+    /* display: grid;
+    grid-template-areas: "left-player board right-player"; */
+    display: flex;
+    justify-content: space-around;
+    flex-grow: 1;
+    flex-direction: column;
 }
 
-div.score { margin: auto; }
+/* div.score { margin: auto; }
 div.score:first-child { grid-area: left-player; }
 div.board { grid-area: board; }
-div.score:last-child { grid-area: right-player; }
+div.score:last-child { grid-area: right-player; } */
 .score-display {
     display: none;
     grid-area: score;
@@ -34,24 +38,25 @@ app-pop-up {
     justify-content: center;
     align-items: center;
 }
+.wide, .narrow {
+    display: flex;
+    justify-content: space-evenly;
+}
+.wide { margin-top: -2em; }
+.wide app-score { display: none; }
+.narrow app-score { display: block; }
 
-@media only screen and (max-width: 1440px) {
-    .row {
-        grid-template:
-            [game-board] "board board board" [game-board]
-            [game-score] "left-player score right-player" [game-score] /
-            1fr 5em 1fr
-        ;
-        width: 842px;
-        margin: auto;
-    }
-    .score {
-        margin: 20px auto !important;
-        width: 100%;
-    }
-    .score-display {
+@media  only screen and (min-width: 380px) {
+    .score-display { display: block; }
+    .narrow { align-items: center; }
+    .wide { margin-top: 0; }
+}
+
+@media only screen and (min-width: 820px) {
+    .score-display { display: none; }
+    .wide app-score {
         display: block;
-        padding: 12px;
         margin: auto;
     }
+    .narrow app-score { display: none; }
 }
