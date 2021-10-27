@@ -33,4 +33,8 @@ export class GameComponent implements OnInit {
     ]))
   }
 
+  getOpacity() {
+    return this.isGameInProgress ? 1 : 0;
+  }
+
 }

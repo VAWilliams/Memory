@@ -1,7 +1,7 @@
 
 div.content {
-    min-width: 814px;
-    min-height: 591px;
+    /* min-width: 814px;
+    min-height: 591px; */
 
     /* background: linear-gradient(107.62deg, rgba(255, 255, 255, 0.6) -0.7%, rgba(255, 255, 255, 0.1) 102.18%); */
     /* box-shadow: 0px 1.77778px 1.77778px rgba(0, 0, 0, 0.05); */
@@ -16,8 +16,9 @@ div.content {
 
     font-style: normal;
     font-weight: bold;
-    font-size: 52px;
-    line-height: 24px;
+    font-size: 32px;
+    line-height: 28px;
+    width: 8em;
     /* identical to box height, or 46% */
 
     text-align: center;
@@ -29,50 +30,32 @@ div.content {
 .players {
     display: flex;
     justify-content: space-between;
-    width: 814px;
-    margin: 4em 0;
-    
+    flex-direction: column;
 }
 .btn {
-    /* Frame 160 */
-
-
-    /* Auto Layout */
-
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     padding: 0px;
-
     font-style: normal;
     font-weight: bold;
-    font-size: 28px;
-    line-height: 42px;
-    /* identical to box height */
-
+    font-size: 20px;
+    line-height: 2em;
     letter-spacing: -0.02em;
     text-transform: capitalize;
     cursor: pointer;
-
-    /* Shades / 00 */
-
     color: #FFFFFF;
-
-    width: 220px !important;
-    height: 64px;
-
+    width: 7em !important;
+    height: 3em;
     background: #0AB169;
     border: none;
     border-radius: 8px;
-
-    /* Inside Auto Layout */
-
     flex: none;
     order: 2;
     flex-grow: 0;
-    margin: 92px auto;
-    margin-bottom: 0;
+    margin: auto;
+    margin-top: 1em;
 }
 
 .wrapper {
@@ -84,14 +67,14 @@ div.content {
     align-items: center;
     padding: 0px;
 
-    width: 374px;
-    height: 319px;
+    /* width: 374px;
+    height: 319px; */
 }
 .wrapper img {
     
     position: static;
-    width: 180px;
-    height: 222px;
+    width: 6em;
+    /* height: 222px; */
 
 
     /* Inside Auto Layout */
@@ -99,14 +82,14 @@ div.content {
     flex: none;
     order: 0;
     flex-grow: 0;
-    margin: 49px 0px;
+    margin: 1em 0px;
 }
 .wrapper input {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 12px 16px;
+    padding: .8em 1em;
 
     position: static;
     left: 0%;
@@ -150,4 +133,77 @@ div.content {
     order: 0;
     flex-grow: 1;
     margin: 0px 16px;
+}
+
+@media only screen and (min-width: 768px) and (orientation: portrait) {
+    .heading {
+        font-size: 52px;
+        width: auto;
+    }
+    div.content {
+        min-width: 814px;
+        min-height: 591px;
+    }
+    .players {
+        flex-direction: row;
+        width: 814px;
+        margin: 4em 0;
+    }
+    .wrapper {
+        width: 374px;
+        height: 319px;
+    }
+    .wrapper img {
+        height: 222px;
+        width: 192px;
+    }
+}
+
+@media  only screen and (min-width: 380px) {
+    div.content {
+        width: 38em;
+        background: linear-gradient(107.62deg, rgba(255, 255, 255, 0.6) -0.7%, rgba(255, 255, 255, 0.1) 102.18%);
+        padding: .5em;
+    }
+    .heading {
+        font-size: 24px;
+        /* font-size: 32px; */
+        width: auto;
+    }
+    .players {
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+    .wrapper {
+        justify-content: space-between;
+    }
+    .btn {
+        width: 165px !important;
+        height: 36px;
+        text-transform: uppercase;
+    }
+}
+@media only screen and (min-width: 820px) {
+    div.content {
+        min-width: 814px;
+        /* min-height: 591px; */
+        background: none;
+    }
+    .heading { font-size: 32px; }
+    .players { justify-content: space-between; }
+    .wrapper {
+        width: 374px;
+        height: 319px;
+        
+    }
+    .wrapper img {
+        width: auto;
+        margin-top: 3em;
+    }
+    .btn {
+        width: 7em !important;
+        height: 3em;
+        text-transform: capitalize;
+        margin-top: 3em;
+    }
 }

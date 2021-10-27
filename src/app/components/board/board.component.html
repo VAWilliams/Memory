@@ -1,8 +1,8 @@
 <div class="wrapper" [ngClass]="{messageBackground: mustDisplayMessage}">
-    <div *ngFor="let card of deck" class="card" (click)="selectCard(card)">
+    <div *ngFor="let card of deck" class="card" (click)="selectCard(card)" [ngStyle]="{'pointer-events': card.isSelected ? 'none' : 'all'}">
         <div class="inner" *ngIf="!card.isCollected" [ngClass]="{ selected: card.isSelected, hide: mustDisplayMessage }">
-            <div class="front" [ngStyle]="{'background-image': card.images[0]}"></div>
-            <div class="back" [ngStyle]="{'background-image': card.images[1]}"></div>
+            <div class="front" [ngStyle]="{'background-image': card.images[0], 'background-size': 'contain'}"></div>
+            <div class="back" [ngStyle]="{'background-image': card.images[1], 'background-size': 'contain'}"></div>
         </div>
     </div>
     <div class="message-wrapper" [ngClass]="{ hide: !mustDisplayMessage }">

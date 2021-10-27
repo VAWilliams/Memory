@@ -1,20 +1,43 @@
 header {
-    padding: 30px;
+    padding: 1em;
     color: #fff;
 }
 nav {
     display: flex;
+    align-items: center;
     justify-content: space-between;
 }
-nav *:first-child, nav *:last-child {
-    width: 300px;
+
+nav div:first-child {
+    display: none;
 }
 h1 {
     font-style: normal;
     font-weight: bold;
-    font-size: 2em;
+    font-size: 32px;
     line-height: 40px;
     /* or 100% */
     letter-spacing: 0.0882153px;
     color: #FFFFFF;
+}
+.buttons {
+    display: flex;
+    justify-content: space-around;
+}
+
+@media only screen and (min-width: 768px) {
+    nav div:first-child {
+        display: block;
+    }
+    nav *:first-child, nav *:last-child {
+        width: 300px;
+    }
+    h1 {
+        font-size: 40px;
+    }
+}
+@media  only screen and (min-width: 380px) {
+    header {
+        padding: .5em;
+    }
 }

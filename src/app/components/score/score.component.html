@@ -1,8 +1,8 @@
-<div class="wrapper">
+<div class="wrapper" [ngClass]="{reverseFlex: index == 1}">
     <img src="{{player.imageUrl}}" alt="{{player.name}}">
     <h3 class="heading">{{player.name}}</h3>
-    <h2 class="score">Score: {{player.score}}</h2>
-    <div *ngIf="player.current" class="toast">
+    <div [style.opacity]="player.current ? 1 : 0" class="toast">
         <h3>It's Your Turn</h3>
     </div>
+    <h2 class="score"><span>Score: </span>{{player.score}}</h2>
 </div>
