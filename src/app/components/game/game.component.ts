@@ -31,7 +31,10 @@ export class GameComponent implements OnInit {
     this.store.dispatch(new PlayerUpdate([
       { current: true }
     ]))
-    console.log(this.isGameInProgress);
+  }
+
+  getOpacity() {
+    return this.isGameInProgress ? 1 : 0;
   }
 
 }
