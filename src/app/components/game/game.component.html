@@ -1,10 +1,23 @@
 <div class="row">
-    <div *ngFor="let player of players, index as i" class="score" [ngStyle]="{'opacity': isGameInProgress ? '1' : '0'}">
-        <app-score [player]="player" [index]="i"></app-score>
+    <div class="wide" [style.opacity]="getOpacity()">
+        <app-score [player]="players[0]" [index]="0"></app-score>
+        <div class="board" [style.opacity]="getOpacity()">
+            <app-board></app-board>
+        </div>
+        <app-score [player]="players[1]" [index]="1"></app-score>
     </div>
-    <div class="score-display" [ngStyle]="{'opacity': isGameInProgress ? '1' : '0'}"><span>Score</span></div>
-    <div class="board" [ngStyle]="{'opacity': isGameInProgress ? '1' : '0'}">
-        <app-board></app-board>
+    <div class="narrow"
+        [style.opacity]="getOpacity()"
+    >
+        <ng-container *ngFor="let player of players, index as i">
+            <app-score [player]="player" [index]="i"></app-score>
+            <div class="score-display"
+                *ngIf="i == 0"
+                [style.opacity]="getOpacity()"
+            >
+                <span>Score</span>
+            </div>
+        </ng-container>
     </div>
     <app-pop-up *ngIf="!isGameInProgress"></app-pop-up>
 </div>
